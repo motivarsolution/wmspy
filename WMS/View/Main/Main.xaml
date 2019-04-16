@@ -21,6 +21,51 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         >
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--<Menu Grid.Row="0">
+            <MenuItem>
+                <TextBlock Text="Files"/>
+            </MenuItem>
+        </Menu>-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0"
+                        Orientation="Vertical">
+                <TextBlock Text="--- Menu ---"
+                           FontSize="20"
+                           HorizontalAlignment="Center"/>
+                <Grid >
+                    <ListView>
+                        <ListViewItem>
+                            <TextBlock Text="Menu 1"/>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <TextBlock Text="Menu 2"/>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <TextBlock Text="Menu 3"/>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <TextBlock Text="Menu 4"/>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <TextBlock Text="Menu 5"/>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <TextBlock Text="Menu 6"/>
+                        </ListViewItem>
+                    </ListView>
+                </Grid>
+            </StackPanel>
+            
+        </Grid>
         
+                
     </Grid>
 </Window>

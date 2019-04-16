@@ -22,33 +22,49 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         >
     <Grid>
+        <!--<materialDesign:Card HorizontalAlignment="Center" 
+                             VerticalAlignment="Center"
+                             Height="300"
+                             Width="350">
+        </materialDesign:Card>-->
         <StackPanel Orientation="Vertical"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
             <StackPanel Orientation="Vertical" Margin="0 0 0 10">
-                <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
-                     Width="300" 
-                     Height="40" 
-                     MinWidth="120"/>
-                <TextBlock Text="Username"
-                           HorizontalAlignment="Right"
-                           Opacity="0.5"/>
+                <!--<TextBox x:Name="UsernameTextBox"
+                         materialDesign:HintAssist.Hint="Username">
+                    <TextBox.Text>
+                        <Binding Path="Name"
+                                 UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>-->
+                <TextBox
+                    Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+                    VerticalAlignment="Top"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Username"/>
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="0 0 0 20">
-                <PasswordBox Style="{StaticResource MaterialDesignPasswordBox}" 
-                     Width="300" 
-                     Height="40" 
-                     MinWidth="120" />
-                <TextBlock Text="Password"
-                           HorizontalAlignment="Right"
-                           Opacity="0.5"/>
+                <!--<PasswordBox
+                      x:Name="PasswordBox"
+                      materialDesign:HintAssist.Hint="Password" />-->
+                <PasswordBox
+                            Style="{StaticResource MaterialDesignFilledPasswordFieldPasswordBox}"
+                            VerticalAlignment="Top"
+                            materialDesign:HintAssist.Hint="Password" />
             </StackPanel>
-            <Button Content="Login"
-                    Background="Transparent"
-                    BorderBrush="Gray"
-                    BorderThickness="1"
-                    Width="300"/>
-
+            <Button
+                Style="{StaticResource MaterialDesignRaisedLightButton}"
+                Width="300"
+                ToolTip="Resource name: MaterialDesignRaisedLightButton"
+                Content="Login">
+                            
+            </Button>
         </StackPanel>
 
     </Grid>
