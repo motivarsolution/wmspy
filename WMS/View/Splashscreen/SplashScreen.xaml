@@ -1,0 +1,26 @@
+﻿<Window x:Class="WMS.Image.Splashscreen.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WMS.Image.Splashscreen"
+        mc:Ignorable="d"
+        Title="SplashScreen" 
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode ="NoResize"
+        Background="#1b2b3e"
+        Height="450" 
+        Width="800" >
+    <Grid>
+        <Image Source="/Image/Splashscreen/splash_screen.jpg"/>
+        <ProgressBar Minimum="0" 
+                     Maximum="100" 
+                     Value="75"
+                     Width="800"
+                     Height="2"
+                     VerticalAlignment="Bottom"
+                     HorizontalAlignment="Center">
+        </ProgressBar>
+    </Grid>
+</Window>
