@@ -52,6 +52,37 @@
                     <MenuItem Header="_Transfer Stock..."/>
                     <MenuItem Header="_Return Stock..."/>
                 </MenuItem>
+                <MenuItem Header="_Locations">
+                    <MenuItem Header="_New Locations..."/>
+                    <MenuItem Header="_Open Locations List..."/>
+                </MenuItem>
+                <MenuItem Header="_Suppliers">
+                    <MenuItem Header="_New Suppliers..."/>
+                    <MenuItem Header="_Open Suppliers List..."/>
+                </MenuItem>
+                <MenuItem Header="_Customers">
+                    <MenuItem Header="_New Customers..."/>
+                    <MenuItem Header="_Open Customers List..."/>
+                </MenuItem>
+                <MenuItem Header="_Reports">
+                    <MenuItem Header="_Inventory..."/>
+                    <MenuItem Header="_Inventory by Location and Category..."/>
+                    <MenuItem Header="_Inventory with Image by Category..."/>
+                    <MenuItem Header="_Low Level Stock..."/>
+                    <MenuItem Header="_Inventory by Default Supplier..."/>
+                    <MenuItem Header="_Backorder Report..."/>
+                    <MenuItem Header="_Sales Report..."/>
+                </MenuItem>
+                <MenuItem Header="_Tools">
+                    <MenuItem Header="_Backup Data..."/>
+                    <MenuItem Header="_Restore Data..."/>
+                    <Separator></Separator>
+                    <MenuItem Header="_Options..."/>
+                    <MenuItem Header="_Hide Toolbar"/>
+                </MenuItem>
+                <MenuItem Header="_Help">
+                    <MenuItem Header="_About..."/>
+                </MenuItem>
             </Menu>
             
             <StackPanel></StackPanel>
