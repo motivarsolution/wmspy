@@ -23,23 +23,49 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <!--<Menu Grid.Row="0">
-            <MenuItem>
-                <TextBlock Text="Files"/>
-            </MenuItem>
-        </Menu>-->
-        <Grid Grid.Row="1">
+        <DockPanel Grid.Row="0">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Inventory">
+                    <MenuItem Header="_New Item..."/>
+                    <MenuItem Header="_Edit Item"/>
+                    <MenuItem Header="_Duplicate Item"/>
+                    <MenuItem Header="_Delete Item"/>
+                    <MenuItem Header="_Find Item"/>
+                    <MenuItem Header="Find Next Item"/>
+                    <Separator/>
+                    <MenuItem Header="_Open Orders List..."/>
+                    <Separator/>
+                    <MenuItem Header="_Import Items from CSV..."/>
+                    <Separator/>
+                    <MenuItem Header="_Register Software..."/>
+                    <MenuItem Header="_Launch..."/>
+                    <MenuItem Header="_Exit (Close to Tray)"/>
+                    <MenuItem Header="_Exit (Turn Off)"/>
+                </MenuItem>
+                <MenuItem Header="_Stock">
+                    <MenuItem Header="_Sell Stock..."/>
+                    <MenuItem Header="_Receive Stock..."/>
+                    <MenuItem Header="_Order Stock..."/>
+                    <MenuItem Header="_Transfer Stock..."/>
+                    <MenuItem Header="_Return Stock..."/>
+                </MenuItem>
+            </Menu>
+            
+            <StackPanel></StackPanel>
+        </DockPanel>
+        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0"
                         Orientation="Vertical">
-                <TextBlock Text="--- Menu ---"
+                <TextBlock Text=" Items "
                            FontSize="20"
-                           HorizontalAlignment="Center"/>
+                           HorizontalAlignment="Left"/>
                 <Grid >
                     <ListView>
                         <ListViewItem>
