@@ -24,7 +24,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0">
             <Menu DockPanel.Dock="Top">
@@ -87,42 +88,217 @@
             
             <StackPanel></StackPanel>
         </DockPanel>
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Stretch">
+                <Button Content="Item"
+                        Width="80"/>
+                <Button Content="Reports"
+                        Width="80"/>
+                <Button Content="View"
+                        Width="80"/>
+                <Button Content="Options"
+                        Width="80"/>
+            </StackPanel>
+            <Button Content="Reports"
+                    Width="80"
+                    HorizontalAlignment="Right"/>
+        </Grid>
+        <Grid Grid.Row="2"
+              Margin="0 10 0 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0"
-                        Orientation="Vertical">
-                <TextBlock Text=" Items "
+            <ScrollViewer Grid.Column="0"
+                          Background="LightCyan"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text=" Items "
                            FontSize="20"
-                           HorizontalAlignment="Left"/>
-                <Grid >
-                    <ListView>
-                        <ListViewItem>
-                            <TextBlock Text="Menu 1"/>
-                        </ListViewItem>
-                        <ListViewItem>
-                            <TextBlock Text="Menu 2"/>
-                        </ListViewItem>
-                        <ListViewItem>
-                            <TextBlock Text="Menu 3"/>
-                        </ListViewItem>
-                        <ListViewItem>
-                            <TextBlock Text="Menu 4"/>
-                        </ListViewItem>
-                        <ListViewItem>
-                            <TextBlock Text="Menu 5"/>
-                        </ListViewItem>
-                        <ListViewItem>
-                            <TextBlock Text="Menu 6"/>
-                        </ListViewItem>
-                    </ListView>
+                           HorizontalAlignment="Left"
+                           Margin="0 20 0 0"/>
+                    <Grid >
+                        <ListView>
+                            <ListViewItem>
+                                <TextBlock Text="Add New Item"/>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="Find Item"/>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="View Transfers"/>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="Import Item From CSV"/>
+                            </ListViewItem>
+                        </ListView>
+                    </Grid>
+                    <TextBlock Text=" Purchase "
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="0 10 0 0"/>
+                    <Grid >
+                        <ListView>
+                            <ListViewItem>
+                                <TextBlock Text="Order Stock"/>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="Receive Stock"/>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="View Order"/>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="View Receive History"/>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="View Items On Order"/>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="Order Low Stock Items"/>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="Return Stock"/>
+                            </ListViewItem>
+                        </ListView>
+                    </Grid>
+                    <TextBlock Text=" Sell "
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="0 10 0 0"/>
+                    <Grid >
+                        <ListView>
+                            <ListViewItem>
+                                <TextBlock Text="Sell Stock"/>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="View Sales History"/>
+                            </ListViewItem>
+                        </ListView>
+                    </Grid>
+
+                </StackPanel>
+            </ScrollViewer>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="15*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0"
+                            Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical"
+                                Margin="20 0 0 0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Category:"
+                                   Width="80"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Right"
+                                   Margin="0 0 5 0"/>
+                            <ComboBox Width="80">
+                                <ComboBoxItem>
+                                    <TextBlock Text="All"/>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Others"/>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Subcategory:" 
+                                   Width="80"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Right"
+                                   Margin="0 0 5 0"/>
+                            <ComboBox Width="80">
+                                <ComboBoxItem>
+                                    <TextBlock Text="All"/>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Others"/>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical"
+                                Margin="40 0 0 0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Category:"
+                                   Width="80"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Right"
+                                   Margin="0 0 5 0"/>
+                            <ComboBox Width="80">
+                                <ComboBoxItem>
+                                    <TextBlock Text="All"/>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Others"/>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Subcategory:" 
+                                   Width="80"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Right"
+                                   Margin="0 0 5 0"/>
+                            <ComboBox Width="80">
+                                <ComboBoxItem>
+                                    <TextBlock Text="All"/>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Others"/>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical"
+                                Margin="40 0 0 0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Category:"
+                                   Width="80"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Right"
+                                   Margin="0 0 5 0"/>
+                            <ComboBox Width="80">
+                                <ComboBoxItem>
+                                    <TextBlock Text="All"/>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Others"/>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Subcategory:" 
+                                   Width="80"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Right"
+                                   Margin="0 0 5 0"/>
+                            <ComboBox Width="80">
+                                <ComboBoxItem>
+                                    <TextBlock Text="All"/>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Others"/>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                <Grid Grid.Row="1">
+                    <DataGrid>
+                        
+                    </DataGrid>
                 </Grid>
-            </StackPanel>
+            </Grid>
             
         </Grid>
-        
-                
+        <Grid Grid.Row="3"
+              Background="LightGray">
+            
+        </Grid>
+
     </Grid>
 </Window>
