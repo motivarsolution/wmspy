@@ -23,5 +23,15 @@ namespace WMS.View.Main
         {
             InitializeComponent();
         }
+
+        private void ReportMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!SystemParameters.SwapButtons) //Check left button
+            {
+                ReportMenuButton.ContextMenu.IsOpen = true;
+            }
+            e.Handled = true;
+
+        }
     }
 }

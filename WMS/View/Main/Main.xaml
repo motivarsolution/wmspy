@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WMS.View.Main"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Main" 
+        Title="Motivar : Warehouse Management System" 
         Height="720" 
         Width="1280"
         Icon="/Image/Logo/Icon.png"
@@ -154,44 +154,65 @@
 
         </DockPanel>
         <Grid Grid.Row="1">
-            <Grid Visibility="Collapsed">
-                <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Stretch">
-                    <Button Content="Item"
-                        Width="80"/>
-                    <Button Content="Reports"
-                        Width="80"/>
-                    <Button Content="View"
-                        Width="80"/>
-                    <Button Content="Options"
-                        Width="80"/>
-                </StackPanel>
-                <Button Content="Reports"
-                    Width="80"
-                    HorizontalAlignment="Right"/>
-            </Grid>
             <ToolBarTray>
                 <ToolBar
-    Style="{DynamicResource MaterialDesignToolBar}"
-    ClipToBounds="False">
-                    <Button
-      ToolTip="Follow me on Twitter">
-                        <materialDesign:PackIcon
-        Kind="TwitterBox" />
+                    Style="{DynamicResource MaterialDesignToolBar}"
+                    ClipToBounds="False">
+                    <Button ToolTip="Add new item">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon Kind="AddBox" 
+                                                     HorizontalAlignment="Center"/>
+                            <TextBlock Text="Item"
+                                       FontWeight="Light"
+                                       HorizontalAlignment="Center"/>
+                        </StackPanel>
                     </Button>
-                    <Button
-      ToolTip="Save">
-                        <materialDesign:PackIcon
-        Kind="ContentSave" />
+                    <Button Name="ReportMenuButton" 
+                            ToolTip="Report" Click="ReportMenuButton_Click" >
+                        <!--<Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Style.Triggers>
+                                    <EventTrigger RoutedEvent="Click">
+                                        <EventTrigger.Actions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="ContextMenu.IsOpen">
+                                                        <DiscreteBooleanKeyFrame KeyTime="0:0:0" Value="True"/>
+                                                    </BooleanAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger.Actions>
+                                    </EventTrigger>
+                                </Style.Triggers>
+                                <Setter Property="ContextMenu">
+                                    <Setter.Value>
+                                        <ContextMenu>
+                                            <MenuItem />
+                                            <MenuItem />
+                                        </ContextMenu>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>-->
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon Kind="ChartBar" 
+                                                     HorizontalAlignment="Center"/>
+                            <TextBlock Text="Report"
+                                       FontWeight="Light"
+                                       HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <Button.ContextMenu>
+                            <ContextMenu HorizontalAlignment="Right">
+                                <TextBlock Text="Inventory"/>
+                                <TextBlock Text="Inventory"/>
+                                <TextBlock Text="Inventory"/>
+                                
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                        
                     </Button>
-                    <Separator />
-                    <Button
-      Command="Cut"
-      ToolTip="Cut"
-      ToolBar.OverflowMode="AsNeeded">
-                        <materialDesign:PackIcon
-        Kind="ContentCut" />
-                    </Button>
+
+
                     <Button
       Command="Copy"
       ToolTip="Copy that stuff"
@@ -389,6 +410,20 @@
                             </ListViewItem>
                             <ListViewItem>
                                 <TextBlock Text="View Sales History"/>
+                            </ListViewItem>
+                        </ListView>
+                    </Grid>
+                    <TextBlock Text=" Report "
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="0 10 0 0"/>
+                    <Grid >
+                        <ListView>
+                            <ListViewItem>
+                                <TextBlock Text="Inventory"/>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="Inventory by Location and Category"/>
                             </ListViewItem>
                         </ListView>
                     </Grid>
